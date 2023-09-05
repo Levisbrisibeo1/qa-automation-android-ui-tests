@@ -1,5 +1,10 @@
 const path = require('path')
 
+const app_v_09 = path.join(process.cwd(),'app/android/app-release-v09.apk');
+const app_v_1 = path.join(process.cwd(),'app/android/app-release-v1.apk');
+const deviceName = 'Pixel_XL_API_31';
+const platFormVersion = '12.0';
+
 exports.config = {
     //
     // ====================
@@ -57,11 +62,13 @@ exports.config = {
     capabilities: [{
         // capabilities for local Appium web tests on an Android Emulator
         platformName: 'Android',
-        'appium:deviceName': 'Pixel XL API 31',
-        'appium:platformVersion': '12.0',
+        'appium:deviceName': deviceName,
+        'appium:avd':deviceName,
+        'appium:platformVersion': platFormVersion,
         'appium:automationName': 'UiAutomator2',
-        'appium:app': path.join(process.cwd(),'app/android/app-release-v09.apk'),
-        // 'appium:app': path.join(process.cwd(),'app/android/app-release-v1.apk')
+        'appium:app': app_v_1,
+        'appium:wdaConnectionTimeout': 600000,
+        'appium:wdaLaunchTimeout': 600000,
     }],
 
     //

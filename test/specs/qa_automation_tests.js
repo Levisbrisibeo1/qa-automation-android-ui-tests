@@ -16,8 +16,8 @@ describe('QA-Automation V0.9 and v1.0', () => {
     });
 
     it('should change 1 to 2 when button is clicked', async () => {
-        await HomeScreen.button.click()
-        await expect(HomeScreen.labelText).toHaveText('2')
+        await HomeScreen.button.click();
+        await expect(HomeScreen.labelText).toHaveText('2');
 
     });
 

@@ -22,6 +22,6 @@ The source code for the frawork can be found here:
 ### Running the tests
 ```
 1.Launch the right emulator: Pixel XL API 31
-2. open wdio.conf.js - uncomment the app version you want to test
+2. open wdio.conf.js - change the app version to test (app_v_1 or app_v_09)
 3. run command: npx wdio
 ```
